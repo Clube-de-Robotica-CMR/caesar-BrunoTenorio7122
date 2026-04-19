@@ -37,6 +37,7 @@ int main(int argc, string argv[])
     string plaintext = get_string("plaintext: ");
     int caracteres = strlen(plaintext);
     int cripto = 0;
+    printf("ciphertext: ");
 
     for (int i = 0; i < caracteres; i++)
     {
@@ -45,14 +46,9 @@ int main(int argc, string argv[])
             if (isupper(plaintext[i]))
             {
                 cripto = plaintext[i] - 'A';
-                cripto = cripto + key;
-                cripto = cripto + 'A';
-
-                if(cripto > 90)
-                {
-                    cripto = cripto - 26;
-                }
-                printf("%c", cripto);
+                cripto = (cripto + key) % 26;
+                
+                printf("%c", cripto + 'A');
             }
 
             else if (islower(plaintext[i]))
