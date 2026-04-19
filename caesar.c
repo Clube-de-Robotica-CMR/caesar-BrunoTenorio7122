@@ -53,7 +53,7 @@ int main(int argc, string argv[])
 
                 if(cripto > 90)
                 {
-                    cripto = cripto - 25;
+                    cripto = cripto - 26;
                 }
                 printf("%c", cripto);
             }
@@ -66,7 +66,7 @@ int main(int argc, string argv[])
 
                 if(cripto > 122)
                 {
-                    cripto = cripto - 25;
+                    cripto = cripto - 26;
                 }
 
                 printf("%c", cripto);
