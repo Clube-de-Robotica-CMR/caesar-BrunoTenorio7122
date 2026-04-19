@@ -28,13 +28,10 @@ int main(int argc, string argv[])
         printf("Como usar: ./caesar key\n");
         return 1;
     }
-
-    for (int i = 0; i < key; i++)
+    
+    if (key > 26)
     {
-        if (key > 26)
-        {
-            key = key % 26;
-        }
+        key = key % 26;
     }
 
     string plaintext = get_string("plaintext: ");
