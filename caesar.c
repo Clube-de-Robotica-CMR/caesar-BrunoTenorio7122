@@ -28,7 +28,7 @@ int main(int argc, string argv[])
         printf("Como usar: ./caesar key\n");
         return 1;
     }
-    
+
     if (key > 26)
     {
         key = key % 26;
@@ -58,15 +58,9 @@ int main(int argc, string argv[])
             else if (islower(plaintext[i]))
             {
                 cripto = plaintext[i] - 'a';
-                cripto = cripto + key;
-                cripto = cripto + 'a';
+                cripto = (cripto + key) % 26;
 
-                if(cripto > 122)
-                {
-                    cripto = cripto - 26;
-                }
-
-                printf("%c", cripto);
+                printf("%c", cripto + 'a');
             }
         }
 
